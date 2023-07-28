@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AF Art Gallery&#8482; - Access</title>
+        <link rel="icon" href="images/AF_home_icon00.png" type="image/x-icon">
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- The following line is the syntax to show a little icon with the title page -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+
+    <body>
+        <!-- Header of the WebSite -->
+        <header class="header">
+            <nav>
+                <a href="index.html"><img src="images/AF_home_icon00.png" alt="an art icon reproducing a picture"></a>
+                    <div class="nav_links" id="navLinks">
+                        <i class="fa fa-times" onclick="hideMenu()"></i>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="agenda.html">Agenda</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="signUpLogin.html">Sign Up / Login</a></li>
+                        </ul>
+                    </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <div class="text_box">
+                <h1>AF Art Gallery<sup>&#8482;</sup></h1>
+                <h2>Find the artist in you.</h2>
+                <br>        
+                <a href="contact.html" class="hero_btn">Click Hero to Contact Us</a>
+            </div>
+        
+            <!-- JavaScript to show and hide manu where in mobile devices. open/close menus -->
+            <script src="scripts/mobileMenu.js"></script>
+
+        </header>
+
+        <main>
+            
+            <!-- Sign In and Login -->
+            <section class="accessForms">
+                <h1>Welcome to User Account Area!</h1>
+                <br>
+                <br>
+                <div class="disclaimer">
+                    <h3>Before you proceed with logging in or creating an account, please read and understand the following disclaimer:</h3>
+                    <br>
+                    <br>
+                    <ol>
+                        <li>Account Responsibility:
+                            By creating an account, you acknowledge that you are responsible for maintaining the confidentiality of your account information, including your username and password. You agree not to share your account credentials with anyone else and to take appropriate measures to prevent unauthorized access to your account.</li>
+                        <li>Personal Information:
+                            When creating an account, you may be required to provide personal information, such as your name and email address. We respect your privacy, and your personal data will be handled in accordance with our Privacy Policy. We will not share your information with third parties without your consent.</li>    
+                        <li>Account Usage:
+                            Your account is intended for personal use only. You must not use your account for any unlawful, fraudulent, or unauthorized purposes. Any activity that violates our Terms of Service will result in the immediate termination of your account.</li>
+                        <li>Security Measures:
+                            We implement reasonable security measures to protect your account and data. However, it is essential for you to be vigilant and take necessary precautions, such as regularly updating your password and logging out from shared devices.</li>
+                        <li>Content Responsibility:
+                            Any content you post, upload, or share through your account is your responsibility. You agree not to post content that is offensive, inappropriate, or infringes on the rights of others. We reserve the right to remove any content that violates our content guidelines.</li>
+                        <li>Changes and Updates:
+                            This disclaimer, along with our Terms of Service and Privacy Policy, may be updated from time to time. We encourage you to review these documents regularly to stay informed about any changes that may affect your account usage.</li>
+                        <li>Termination of Account:
+                            We reserve the right to suspend or terminate your account at our discretion if we suspect any violation of our policies or if your account remains inactive for an extended period.</li>
+                    </ol>
+                    <br>
+                    <br>
+                    <h3>By logging in or creating an account, you agree to the terms and conditions outlined in this disclaimer. If you do not agree with any of these terms, please refrain from using our User Account Area. If you have any questions or concerns, feel free to contact our support team for assistance.</h3>
+                </div>
+
+                <div class="row">
+                    <div class="accessForms-col" id="login">
+                        <h3>Already have an account?</h3>
+                        <p>Login</p>
+                        <form action="" method="post" class="accessForms-form">
+                            <label for="signin_email">Email:</label>
+                            <input type="email" id="signin_email" name="signin_email" required>
+                            <br>
+                            <br>
+                            <label for="signin_password">Password:</label>
+                            <input type="password" id="signin_password" name="signin_password" required>
+                            <br><br><br><br><br>
+                            <br><br><br><br><br>
+                            <button type="submit" class="hero_btn">Login</button>
+                        </form>
+                    </div>
+                
+                    <div class="accessForms-col" id="signUp">
+                        <h3>Do not have an account yet?</h3>
+                        <p>Sign Up</p>
+                        <form action="" method="post" class="accessForms-form">
+                            <label for="firstname">First Name:</label>
+                            <input type="text" id="firstname" name="firstname" required>
+                            <br>
+                            <br>
+                            <label for="lastname">Last Name:</label>
+                            <input type="text" id="lastname" name="lastname" required>
+                            <br>
+                            <br>
+                            <label for="classinterest">Class of Interest:</label>
+                            <select id="class_selection" name="class_selection" required>
+                                <option value="">-- Select a Class --</option>
+                                <option value="oil_painting">Oil Painting</option>
+                                <option value="ceramic_modeling">Ceramic Modeling</option>
+                                <option value="sculpture">Sculpture</option>
+                                <option value="ceramic_painting">Ceramic Painting</option>
+                                <option value="art_history">Art History</option>
+                            </select>
+                            <br>
+                            <br>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <br>
+                            <br>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                            <br>
+                            <br>
+                            <label for="confirm_password">Confirm Password:</label>
+                            <input type="password" id="confirm_password" name="confirm_password" required>
+                            <br>
+                            <br>
+                            <button type="submit" class="hero_btn">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <h3><a href="index.html" target="_blank">AF Art Gallery&#174;</a></h3>
+            <h4>
+                Toronto, Ontario, Canada<br>
+                Copiright &#169; 2023 - AF Art Gallery<br><br>
+                Develop By <a href="https://www.linkedin.com/in/radrianodev/"
+                    target="_blank">RAdrianoDev</a><br>
+                Email: <a href="mailto:ronaldo@radriano.dev">ronaldo@radriano.dev</a>
+            </h4>
+        </footer>
+
+    </body>
+
+</html>

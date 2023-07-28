@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+
+:root{
+    --color-main-fonts:#ffffff;
+    --color-nav-transition: #ff0303;
+    --color-border-index-buton: #ffffff;
+    --color-button-hover: #ca470a;
+    --color-background-menu-mobile: #7f0909;
+    --color-background-aboutUs: #ffeeee;
+    --color-font-p-curiosities:#777;
+    --color-font-form: #545454;
+    --color-font-aboutAF: #ffffff;
+    --color-background-card-curiosities:#f1f3ff;
+
+    --color-background-card-ShihtzuColors: rgba(23, 6, 122, 0.7);
+}
+
+* {
+    border: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header of the WebSite */
+.header{
+    min-height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(../images/AF_home_banner00.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 100px;
+}
+
+.nav_links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav_links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav_links ul li a{
+    color: var(--color-main-fonts);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav_links ul li::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: var(--color-nav-transition);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav_links ul li:hover::after{
+    width: 100%;
+}
+
+.text_box{
+    width: 90%;
+    color: var(--color-main-fonts);
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10px;
+}
+
+.text_box h1{
+    font-size: 51px;
+}
+
+.text_box h2{
+    font-size: 20px;
+}
+
+.text_box p{
+    margin: 10px 0 40px;
+    font-size: 13px;
+    color: var(--color-main-fonts);
+    font-style: italic;
+}
+
+.hero_btn{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-main-fonts);
+    border: 2px solid var(--color-border-index-buton);
+    padding: 12px 34px;
+    font-size: 13px;
+    font-weight: 600;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero_btn:hover{
+    border: 2px solid var(--color-button-hover);
+    transition: 0.5s;
+}
+
+nav .fa{
+    display: none;
+}
+
+/* Header of the WebSite - responsive adjusts*/
+@media(max-width: 700px){
+    .text_box h1{
+        font-size: 20px;
+    }
+
+    .text_box h2{
+        font-size: 13px;
+    }
+
+    .text_box p{
+        font-size: 9px;
+    }
+
+    .nav_links ul li{
+        display: block;
+    }
+
+    .nav_links{
+        position: absolute;
+        background: var(--color-background-menu-mobile);
+        height: 100vh;
+        width: -200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.75s;
+    }
+
+    nav .fa{
+        display: block;
+        color: var(--color-border-index-buton);
+        margin: 10px;
+        font: 22px;
+        cursor: pointer;
+    }
+
+    .nav_links ul{
+        padding: 30px;
+    }
+}
+
+/* About Us */
+.aboutUs{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.aboutUs p{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/AF_home_aboutAF01.jpg);
+    background-position: center;
+    background-size: cover;
+    color: var(--color-font-aboutAF);
+    font-size: 15px;
+    font-weight: 300;
+    text-align: justify;
+    padding: 30px;
+    columns: 3;
+    column-gap: 45px;
+    border-radius: 10px;
+}
+
+.aboutAF{
+    color: var(--color-font-aboutAF);
+    background-color: var(--color-background-aboutAF);
+}
+
+@media(max-width: 700px){
+    .aboutUs p{
+        columns: 1;
+    }
+}
+
+/* Our Gallery */
+.galleryInfo{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+p{
+    color: var(--color-font-p-curiosities);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 21px;
+    padding: 20px 10px;
+}
+
+.galleryInfo-col{
+    flex-basis:31%;
+    background: var(--color-background-card-curiosities);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.galleryInfo-col a{
+    color: var(--color-font-p-curiosities);
+}
+
+h3{
+    text-align: center;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.galleryInfo-col:hover{
+    box-shadow: 0 0 25px 0px rgba(0,0,0,0.2);
+    
+}
+
+/*--- Row general config ---*/
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Our Gallery - responsive adjusts*/
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*--- Virtual Art Gallery ---*/
+.row-gallery{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.vArtGallery{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.vArtGallery p{
+    color: var(--color-font-p-curiosities);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 21px;
+    padding: 10px;
+}
+
+.vArtGallery h3{
+    padding-top: 30px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+.vArtGallery-col{
+    flex-basis: 30%;
+    border-radius: 10px;
+    padding: 18px 0;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.vArtGallery-col img{
+    width: 70%;
+    border-radius: 10px;
+    transition: 1s;
+    filter: grayscale(100%);
+}
+
+.vArtGallery-col img:hover{
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+/*--- Agenda ---*/
+.agenda{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.agenda p{
+    color: var(--color-font-p-curiosities);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 21px;
+    padding: 10px;
+}
+
+.table-container {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.schedule-table {
+    width: 100%;
+    margin-top: 100px;
+    border-collapse: collapse;
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.schedule-table th {
+    background-color: #f2f2f2;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+.schedule-table tr:hover, th:hover {
+    background-color: var(--color-background-menu-mobile);
+    color: var(--color-main-fonts);
+} 
+
+
+/* <!-- Contact --> */
+.contact{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    background-size: cover;
+    padding-top: 100px;
+}
+
+.contact-col{
+    flex-basis: 45%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.contact-col img{
+    width: 40%;
+    border-radius: 10px;
+}
+
+.contact-col p{
+    padding: 0;
+}
+
+.contact-col h3{
+    margin-top: 16px;
+}
+
+.contactUs{
+    width: 80%;
+    padding: 30px 20px;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.2)), url(../images/AF_contact_form01.jpg);
+    background-position: center;
+    margin: auto;
+    columns: 2;
+}
+
+.contactUs form{
+    text-align: left;
+}
+
+.contactUs form p{
+    color: var(--color-main-fonts);
+    font-size: 11px;
+    font-style: italic;
+}
+
+@media(max-width: 700px){
+    .contactUs{
+        width: 80%;
+        columns: 1;
+    }
+}
+
+
+/* <!-- Sign In and Login --> */
+.accessForms{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.disclaimer{
+    color: var(--color-font-form);
+    font-size: 13px;
+    padding: 20px;
+}
+
+.disclaimer ol{
+    padding: 10px 20px;
+    columns: 2;
+    column-gap: 45px;
+    font-size: 12px;
+}
+
+.disclaimer li{
+    padding: 5px 0;
+    text-align: justify;
+}
+
+.accessForms-col{
+    flex-basis: 45%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    padding: 10px;
+    color: var(--color-main-fonts);
+}
+
+.accessForms-col img{
+    width: 30%;
+    border-radius: 10px;
+}
+
+.accessForms-col p{
+    font-weight: 500;
+    text-align: center;
+    color: var(--color-main-fonts);
+}
+
+.accessForms-col h3{
+    margin-top: 16px;
+    justify-content: space-around;
+}
+
+.accessForms-form{
+    padding: 20px;
+}
+
+#login{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url(../images/AF_access_login.jpg);
+    background-position: top;
+    background-size: cover;
+}
+
+#signUp{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.2)), url(../images/AF_access_signup.jpg);
+    background-position: top;
+    background-size: cover;
+}
+
+@media(max-width: 700px){
+    .disclaimer ol{
+        columns: 1;
+        padding: 5px;
+    }
+}
+
+/* <!-- Newsletter --> */
+.newsletter{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.2)), url(../images/AF_home_newsletter.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.newsletter h1, label{
+    color: var(--color-main-fonts);
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+/* <!-- Action - responsive adjusts --> */
+@media(max-width:700px){
+    .newsletter h1{
+        font-size: 23px;
+    }
+}
+
+/* <!-- Footer --> */
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer a{
+    color: var(--color-font-p-curiosities);
+}
+
+.footer h3{
+    color: var(--color-font-p-curiosities);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer h4{
+    color: var(--color-font-p-curiosities);
+    font-size: 13px;
+    font-weight: 300;
+}
+
+

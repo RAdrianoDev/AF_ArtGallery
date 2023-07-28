@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AF Art Gallery&#8482; - Contact</title>
+        <link rel="icon" href="images/AF_home_icon00.png" type="image/x-icon">
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- The following line is the syntax to show a little icon with the title page -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+
+    <body>
+        <!-- Header of the WebSite -->
+        <header class="header">
+            <nav>
+                <a href="index.html"><img src="images/AF_home_icon00.png" alt="an art icon reproducing a picture"></a>
+                    <div class="nav_links" id="navLinks">
+                        <i class="fa fa-times" onclick="hideMenu()"></i>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="agenda.html">Agenda</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="signUpLogin.html">Sign Up / Login</a></li>
+                        </ul>
+                    </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+            <div class="text_box">
+                <h1>AF Art Gallery<sup>&#8482;</sup></h1>
+                <h2>Find the artist in you.</h2>
+                <br>
+            </div>
+            
+            <!-- JavaScript to show and hide manu where in mobile devices. open/close menus -->
+            <script src="scripts/mobileMenu.js"></script>
+
+        </header>
+
+        <main>
+            
+            <!-- Contact -->
+            <section class="contact">
+                <h1>Contact Us</h1>
+                <h3>Welcome to the Contact Us page of AF Art Gallery! We are delighted that you want to connect with us and be a part of our vibrant art community. Whether you have questions, feedback, or simply want to reach out, we are here to listen and engage with you.</h3>
+
+                <div class="row">
+                    <div class="contact-col">
+                        <img src="images/AF_contact_col00.jpg" alt="aaaaa">
+                        <h3>Art Inquiries and Exhibition Details:<br></h3>
+                        <p>Do you have questions about our current or upcoming art exhibitions? Curious about the talented artists behind the masterpieces? Our "Contact Us" page is the perfect gateway to get all the information you need. Feel free to reach out with your queries, and our dedicated staff will be delighted to provide you with detailed insights into the captivating world of art showcased at AF Art Gallery.</p>
+                    </div>
+                
+                    <div class="contact-col">
+                        <img src="images/AF_contact_col01.jpg" alt="aaaaa">
+                        <h3>Share Your Feedback and Engage:<br></h3>
+                        <p>At AF Art Gallery, we value your perspective and experiences. Whether you recently attended one of our art classes, admired the exquisite artworks, or joined us for a special event, we welcome your feedback. Share your thoughts, appreciation, or suggestions through the "Contact Us" form, as your input is essential to enhancing our offerings and creating a more enriching experience for our valued visitors.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contactUs">
+                <form action="" method="post">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                    <br>
+                    <br>
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                    <br>
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <br>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <br>
+                    <br>
+                    <label for="subject">Subject:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">-- Select an Option --</option>
+                        <option value="exhibitions">Exhibitions</option>
+                        <option value="enrollment">Enrollment</option>
+                        <option value="classes">Classes</option>
+                        <option value="tours">Tours</option>
+                        <option value="sample">Sample</option>
+                        <option value="events">Events</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="message">Message:</label>
+                    <br>
+                    <textarea id="message" name="message" rows="5" cols="35" maxlength="3000" required></textarea>
+                    <br>
+                    <p><span id="count">0</span> characters typed (limited to 3000)</p>
+                    <br>
+                    <br>
+                    <button type="submit" class="hero_btn">Submit</button>
+                </form>
+                <script src="scripts/countTextArea.js"></script>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <h3><a href="index.html" target="_blank">AF Art Gallery&#174;</a></h3>
+            <h4>
+                Toronto, Ontario, Canada<br>
+                Copiright &#169; 2023 - AF Art Gallery<br><br>
+                Develop By <a href="https://www.linkedin.com/in/radrianodev/"
+                    target="_blank">RAdrianoDev</a><br>
+                Email: <a href="mailto:ronaldo@radriano.dev">ronaldo@radriano.dev</a>
+            </h4>
+        </footer>
+
+    </body>
+
+</html>
